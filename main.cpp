@@ -4,7 +4,7 @@
 #include <string>
 
 
-std::string matrix1[5][5];
+//variables
 std::string yes = "yes";
 std::string no = "no";
 std::string inp;
@@ -13,7 +13,7 @@ int counter = 0;
 
 int main() {
 
-  
+  ///string map
   std::map<int, std::string> matrix2;
 
   
@@ -46,22 +46,23 @@ int main() {
 
 
   for(int i=1; i<10;i++){
-
+      ///staring point
       if(counter==0){
       std::cout<<matrix2[i];
       counter++;
       }
-
+      //input
       std::cin >> inp;
       
       if(inp==yes&&i==1){
         counter = 7;
       }
-      
+      ///map posiiton 1-6 and -1-6
       if(counter<7){
       if(i==6&&inp==no){
           std::cout<<matrix2[-6];
         }
+      //pos 7-11 and -7 to -11
       if(inp==no){
         std::cout<<matrix2[i+1];
       }else{
